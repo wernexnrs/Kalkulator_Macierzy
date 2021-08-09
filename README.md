@@ -1,4 +1,12 @@
 # Kalkulator_Macierzy
+Do zrobienia:
+ - [ ] Rozwinięcie Laplace'a
+ - [ ] Transponowanie macierzy
+ - [ ] Sprawdzanie czy wektory są liniowo niezależne (rząd macierzy)
+ - [ ] Obliczanie macierzy odwrotnej
+ - [ ] Obliczanie macierzy dopełnień
+ - [ ] Rozwiązywanie równań macierzowych
+ - [ ] Przepisać na obiektowy, ogarnąć obsługę błędów, poprawić błędy, zoptymalizować kod
 
 ```py
 import re
