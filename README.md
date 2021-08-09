@@ -1,4 +1,7 @@
 # Kalkulator_Macierzy
+
+Projekt powstał jedynie w celu utrwalenia wiedzy matematycznej. W związku z tym nie są tu wykorzystywane bilbioteki jak NumPy.
+
 Do zrobienia:
  - [ ] Rozwinięcie Laplace'a
  - [ ] Transponowanie macierzy
