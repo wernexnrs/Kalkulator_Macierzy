@@ -35,5 +35,5 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           
-- name: Markdown Embed Code From File
-  uses: tokusumi/markdown-embed-code@v1.0.0
+      - name: Markdown Embed Code From File
+        uses: tokusumi/markdown-embed-code@v1.0.0
