@@ -3,13 +3,17 @@
 Projekt powstał jedynie w celu utrwalenia wiedzy matematycznej. W związku z tym nie są tu wykorzystywane bilbioteki jak NumPy.
 
 Do zrobienia:
- - [ ] Rozwinięcie Laplace'a
+ - [x] Dodawanie macierzy
+ - [x] Odejmowanie macierzy
+ - [x] Mnożenie macierzy
+ - [x] Reguła Sarrusa
  - [ ] Transponowanie macierzy
+ - [ ] Rozwinięcie Laplace'a
  - [ ] Sprawdzanie czy wektory są liniowo niezależne (rząd macierzy)
  - [ ] Obliczanie macierzy odwrotnej
  - [ ] Obliczanie macierzy dopełnień
  - [ ] Rozwiązywanie równań macierzowych
- - [ ] Przepisać na obiektowy, ogarnąć obsługę błędów, poprawić błędy, zoptymalizować kod
+ - [ ] Przepisać na obiektowy, ogarnąć obsługę błędów, poprawić błędy, zoptymalizować kod, zintegrować z flaskiem
 
 ```py
 import re
