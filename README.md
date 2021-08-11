@@ -6,12 +6,15 @@ Do zrobienia:
  - [x] Dodawanie macierzy
  - [x] Odejmowanie macierzy
  - [x] Mnożenie macierzy
- - [x] Reguła Sarrusa
+ - [x] Wyznacznik 3x3 - Reguła Sarrusa
  - [x] Transponowanie macierzy
- - [x] Rozwinięcie Laplace'a
+ - [x] Wyznacznik 4x4 - Rozwinięcie Laplace'a
+ - [ ] Wyznacznik 2x2
  - [ ] Sprawdzanie czy wektory są liniowo niezależne (rząd macierzy)
- - [ ] Obliczanie macierzy odwrotnej
- - [ ] Obliczanie macierzy dopełnień
+ - [ ] Obliczanie macierzy odwrotnej 2x2
+ - [ ] Obliczanie macierzy odwrotnej 3x3
+ - [ ] Obliczanie macierzy dopełnień 2x2
+ - [ ] Obliczanie macierzy dopełnień 3x3
  - [ ] Rozwiązywanie równań macierzowych
  - [ ] Przepisać na obiektowy, ogarnąć obsługę błędów, poprawić błędy, zoptymalizować kod, zintegrować z flaskiem
 
