@@ -9,7 +9,7 @@ Do zrobienia:
  - [x] Wyznacznik 3x3 - Reguła Sarrusa
  - [x] Transponowanie macierzy
  - [x] Wyznacznik 4x4 - Rozwinięcie Laplace'a
- - [ ] Wyznacznik 2x2
+ - [x] Wyznacznik 2x2
  - [ ] Sprawdzanie czy wektory są liniowo niezależne (rząd macierzy)
  - [ ] Obliczanie macierzy odwrotnej 2x2
  - [ ] Obliczanie macierzy odwrotnej 3x3
@@ -65,6 +65,17 @@ def matrix_input(mode):
             print(
                 "\n!Wyznaczniki metodą Sarrusa można wyznaczać jedynie z macierzy wymiaru 3x3! Spróbuj jeszcze raz.\n")
             matrix_input("sarrus")
+
+        return matrix
+
+    elif mode == "dop_3x3":
+        matrix = matrix_input("default")[0]
+
+        if any(len(x) != 3 for x in matrix):
+            print(
+                "\n!W tej opcji macierz dopełnień można wyznaczać jedynie z macierzy wymiaru 3x3! Spróbuj jeszcze "
+                "raz.\n")
+            matrix_input("dop_3x3")
 
         return matrix
 
@@ -154,6 +165,50 @@ def laplace():
     return print(sarrus(matrix_2, 1) * chosen_number)
 
 
+'''
+def macierz_dopelnien_2X2():
+    if len(x) == 2 and all(len(i) == 2 for i in x):
+        new = [[x[1][1], x[1][0] * -1], [x[0][1] * -1, x[0][0]]]
+
+    for i in new:
+        print(i)
+'''
+
+
+def wyz_2x2(y):
+    return y[0][0] * y[1][1] - y[0][1] * y[1][0]
+
+
+def dopelnienie_3x3():
+    x = matrix_input("dop_3x3")
+
+    x = [
+        [
+            [[x[1][1], x[1][2]], [x[2][1], x[2][2]]], [[x[1][0], x[1][2]], [x[2][0], x[2][2]]],
+            [[x[1][0], x[1][1]], [x[2][0], x[2][1]]]
+        ],
+        [
+            [[x[0][1], x[0][2]], [x[2][1], x[2][2]]], [[x[0][0], x[0][2]], [x[2][0], x[2][2]]],
+            [[x[0][0], x[0][1]], [x[2][0], x[2][1]]]
+        ],
+        [
+            [[x[0][1], x[0][2]], [x[1][1], x[1][2]]], [[x[0][0], x[0][2]], [x[1][0], x[1][2]]],
+            [[x[0][0], x[0][1]], [x[1][0], x[1][1]]]
+        ]
+    ]
+
+    new_matrix = []
+
+    for i in x:
+        row = []
+        for j in i:
+            row.append(wyz_2x2(j))
+        new_matrix.append(row)
+
+    for i in new_matrix:
+        print(i)
+
+
 def menu():
     print("""
             MENU - kalkulator macierzy
@@ -161,9 +216,11 @@ def menu():
                 1. Dodawanie macierzy
                 2. Odejmowanie macierzy
                 3. Mnożenie macierzy
-                4. Wyznacznik metodą Sarrusa dla macierzy wymiarów 3x3
-                5. Transponowanie macierzy
+                4. Wyznacznik macierzy 2x2
+                5. Wyznacznik metodą Sarrusa dla macierzy wymiarów 3x3
                 6. Wyznacznik metodą Leplace'a dla macierzy wymiarów 4x4
+                7. Transponowanie macierzy
+                8. Macierz dopełnień 3x3
     """)
 
     choise = int(input("Wybieram: "))
@@ -176,16 +233,21 @@ def menu():
         case 3:
             mnozenie()
         case 4:
-            sarrus([], 0)
+            wyz_2x2()
         case 5:
-            transponowanie()
+            sarrus([], 0)
         case 6:
             laplace()
+        case 7:
+            transponowanie()
+        case 8:
+            dopelnienie_3x3()
         case _:
             print("Nie ma takiej opcji wyboru! Spróbuj jeszcze raz.")
             menu()
 
 
 menu()
+
 
 ```
